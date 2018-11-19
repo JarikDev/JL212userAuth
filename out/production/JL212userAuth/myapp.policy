@@ -1,0 +1,15 @@
+grant {
+permission java.utilPropertyPermission "java.security.policy", "write";
+permission java.io.FilePermission "/tmp/*", "read,write";
+permission java.utilPropertyPermission "os.name","";
+};
+
+grant{
+permission javax.security.auth.AuthPermission "createLoginContext.Login1";
+permission javax.security.auth.AuthPermission "doAsPriveleged";
+};
+
+grant principal com.sun.security.auth.NTSidUserPrincipal "jarik" {
+permission java.util.PropertyPermission "user.*", "read";
+permission java.util.PropertyPermission "os.name", "read";
+};
